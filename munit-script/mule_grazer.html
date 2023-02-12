@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mule Grazer | Munit Tool</title>
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Munit Data Response Grazer</h1>
+        <div class="select-container">
+            <span>Output format: </span>
+            <select id="select">
+                <option value="">Select Format</option>
+                <option value="one-line">One-line</option>
+                <option value="beautify">Beautify</option>
+            </select>
+
+        </div>
+    </header>
+    <main class="grid-container">
+       
+    <div class="text-container">
+        <h2>Input</h2>
+        <textarea  class="input" placeholder="Paste query response here."></textarea>    
+    </div>
+    <div class="text-container">
+        <h2>Output</h2>
+        <textarea  class="output" placeholder="Formatted Output will return here" readonly></textarea>    
+    </div>
+        <button class="converter">Graze</button>
+        <div class="description">                   
+            <h2 class="desc-title">Usage</h2>    
+            <ul>
+                <li>Converts response data from a successful query into usable Munit 'Mock when' variable value</li>
+                <li>Removes Line breaks in the the response</li>
+                <li>Removes Extra whitespace</li>
+                <li>Wraps the response in #[output application/json --- ] to be accepted by Munit variable component</li>                    
+            </ul>            
+        </div>
+    </main>
+        
+  
+    
+</body>
+</html>
