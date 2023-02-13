@@ -58,7 +58,7 @@ function formatBeautifly(textareaElement) {
     
 }
 function addOutputWrapper(text) {
-    if(!text.includes('#[')){
+    if(!text.includes('#[') && inputTextarea.value){
         let prependedString = new String('#[output application/json --- ' + text);    
         if(prependedString[prependedString.length-1] != ']') {
             prependedString = new String(prependedString + ']')
