@@ -10,9 +10,9 @@
     --color-dark-primary: #252525; 
     --color-dark-secondary: #393e46;
     --color-dark-tertiary: #454545; 
-    --color-primary-teal: #469c9f;
-    --color-secondary-teal: #3e8c8f;
-    --color-tertiary-teal: #347578;
+    --color-primary-teal: #347578;    
+    --color-secondary-teal: #327173;
+    --color-tertiary-teal: #2a5f62;
     --color-orange-primary: #f96d00;
     --color-orange-secondary: #c95a06;
     --color-orange-tertiary: #a64801;
@@ -40,7 +40,11 @@ header{
     align-items: center;
     /* gap: 5rem;     */
 }
-
+.select-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
 header span{
     margin-left: 5rem;
     font-size: 3rem;
@@ -49,9 +53,11 @@ header span{
 select,select * {
     font-size: 1.2rem;
     font-family: inherit;
-    background-color: var(--color-tertiary-teal);
+    background-color: var(--color-secondary-teal);
     color: var(--color-light);
-    
+    padding: 8px;
+    border: solid var(--color-light);
+    border-radius: 10px;
 }
 
 textarea:focus{

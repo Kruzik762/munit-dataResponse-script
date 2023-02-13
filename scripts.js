@@ -18,8 +18,8 @@ convertBtn.addEventListener('click', () => {
         outputTextarea.value = '';
         return;    
     }
-    if(selector.value === 'beautify') {
-        outputText = formatBeautifly(inputTextarea);
+    if(selector.value === 'stacked') {
+        outputText = formatStacked(inputTextarea);
         outputTextarea.classList.add('output-shake');
     }else {
         outputText = formatOneline(inputTextarea);        
@@ -37,8 +37,8 @@ selector.addEventListener('change', (e) => {
     
     if(e.currentTarget.value === 'one-line') {
         outputTextarea.value =  formatOneline(outputTextarea);
-    } else if (e.currentTarget.value === 'beautify'){
-        outputTextarea.value = formatBeautifly(outputTextarea);
+    } else if (e.currentTarget.value === 'stacked'){
+        outputTextarea.value = formatStacked(outputTextarea);
     }
 })
 
@@ -48,7 +48,7 @@ function formatOneline(textareaElement) {
    outputTextarea.value = text
    return addOutputWrapper(text);
 }
-function formatBeautifly(textareaElement) {        
+function formatStacked(textareaElement) {        
     return addOutputWrapper(textareaElement.value)
     .replaceAll(/(?<=\{)/g, "\n\t") //Finds all { characters then apply  newline & tab after
     .replaceAll(/(?<=,)/g, '\n\t\t') //Finds all commas (,) then apply  newline & tab after
