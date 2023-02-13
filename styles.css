@@ -10,6 +10,9 @@
     --color-dark-primary: #252525; 
     --color-dark-secondary: #393e46;
     --color-dark-tertiary: #454545; 
+    --color-primary-teal: #469c9f;
+    --color-secondary-teal: #3e8c8f;
+    --color-tertiary-teal: #347578;
     --color-orange-primary: #f96d00;
     --color-orange-secondary: #c95a06;
     --color-orange-tertiary: #a64801;
@@ -24,14 +27,14 @@
     src: url(BRLNSR.TTF) format("truetype");    
 }
 body{   
-    background-color: var(--color-dark-primary);
+    background-color: var(--color-dark-secondary);
     font-family: "Berlin Sans", sans-serif;  
     color: var(--color-light);
     
 }
 header{
     padding: 1rem;
-    background-color: #a64801;
+    background-color: var(--color-primary-teal);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +49,8 @@ header span{
 select,select * {
     font-size: 1.2rem;
     font-family: inherit;
-    background-color: var(--color-orange-primary);
+    background-color: var(--color-tertiary-teal);
+    color: var(--color-light);
     
 }
 
@@ -88,13 +92,13 @@ h2{
 textarea{
     min-height: 500px;
    width: 600px;
-    font-size: 1.2rem;
-    /* padding: 5px; */
+    font-size: 1.4rem;
+    
     resize: none;
     border-radius: 11px;
     font-family: inherit;
     box-shadow: 0 2px 5px 0 #444;
-    background-color: var(--color-dark-secondary);
+    background-color: var(--color-dark-primary);
     color: var(--color-light);
     padding: 1rem
 }
@@ -114,7 +118,7 @@ textarea:hover{
     padding: 10px 30px;
     border-radius: 11px;
     color: #fff;
-    background-color: var(--color-orange-tertiary); 
+    background-color: var(--color-primary-teal); 
     letter-spacing: 1.2px;
     font-size: 1.5rem;
 
@@ -141,7 +145,7 @@ textarea:hover{
 .converter{
     grid-column: 1/-1;   
     border-style: none;
-    background-color: var(--color-orange-primary);
+    background-color: var(--color-primary-teal);
     color: white;
     font-size: 32px;
     width: 100%;    
@@ -152,11 +156,11 @@ textarea:hover{
     padding: 1rem;
 }
 .converter:hover{
-    background-color: var(--color-orange-secondary);    
+    background-color: var(--color-secondary-teal);    
    
 }
 .converter:active{
-    background-color:  var(--color-orange-tertiary)
+    background-color:  var(--color-tertiary-teal)
 }
 
 @media screen and (max-width: 1250px) {
